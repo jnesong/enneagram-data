@@ -1,0 +1,2 @@
+class WeaknessesController < ApplicationController
+end
