@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  resources :weaknesses
-  resources :strengths
-  resources :practices
-  resources :healths
-  resources :enneagrams
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :enneagrams, only: [:index, :show]
+  # do
+  #   resources :weaknesses, only: [:index]
+  #   resources :strengths, only: [:index]
+  #   resources :practices, only: [:index]
+  #   resources :healths, only: [:index, :show]
+  # end
+  get 'enneagrams/:id/healths', to: 'enneagrams#healths'
+  get 'enneagrams/:id/practices', to: 'enneagrams#practices'
+  get 'enneagrams/:id/strengths', to: 'enneagrams#strengths'
+  get 'enneagrams/:id/weaknesses', to: 'enneagrams#weaknesses'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

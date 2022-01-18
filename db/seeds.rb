@@ -189,7 +189,7 @@ practice203 = Practice.create(enneagram_id: two.id, title: "Consider: I am in ne
 
 practice301 = Practice.create(enneagram_id: three.id, title: "Fixed-Hour prayer or meditation", description: "NA")
 practice302 = Practice.create(enneagram_id: three.id, title: "Social media fasts", description: "NA")
-practice303 = Practice.create(enneagram_id: three.id, title: "Consider: Might invisibility be regarded not simply as refuge, but as a condition with its own meaning and power? It is not about retreating from the world but about finding some genuine alternative to a life of perpetual display." description: "NA")
+practice303 = Practice.create(enneagram_id: three.id, title: "Consider: Might invisibility be regarded not simply as refuge, but as a condition with its own meaning and power? It is not about retreating from the world but about finding some genuine alternative to a life of perpetual display.", description: "NA")
 
 practice401 = Practice.create(enneagram_id: four.id, title: "Journaling thanksgiving", description: "NA")
 practice402 = Practice.create(enneagram_id: four.id, title: "Regular meals in community/with others", description: "NA")
