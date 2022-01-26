@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  resources :journeys, only: [:index, :show, :create, :update, :destroy]
+  # resources :users
+  post '/signup', to: 'users#create'
+  get '/auth', to: 'users#show'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
   resources :enneagrams, only: [:index, :show]
   # do
   #   resources :weaknesses, only: [:index]

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_17_015323) do
+ActiveRecord::Schema.define(version: 2022_01_24_182515) do
 
   create_table "enneagrams", force: :cascade do |t|
     t.integer "number"
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(version: 2022_01_17_015323) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["enneagram_id"], name: "index_healths_on_enneagram_id"
+  end
+
+  create_table "journeys", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "date"
+    t.integer "enneagram"
+    t.integer "level"
+    t.text "entry"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_journeys_on_user_id"
   end
 
   create_table "practices", force: :cascade do |t|
@@ -48,6 +59,14 @@ ActiveRecord::Schema.define(version: 2022_01_17_015323) do
     t.index ["enneagram_id"], name: "index_strengths_on_enneagram_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "displayname"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "weaknesses", force: :cascade do |t|
     t.integer "enneagram_id", null: false
     t.string "title"
@@ -58,6 +77,7 @@ ActiveRecord::Schema.define(version: 2022_01_17_015323) do
   end
 
   add_foreign_key "healths", "enneagrams"
+  add_foreign_key "journeys", "users"
   add_foreign_key "practices", "enneagrams"
   add_foreign_key "strengths", "enneagrams"
   add_foreign_key "weaknesses", "enneagrams"

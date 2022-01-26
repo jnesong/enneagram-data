@@ -6,7 +6,7 @@ class EnneagramsController < ApplicationController
     def show
         enneagram = Enneagram.find_by(id: params[:id])
         if enneagram
-            render json: enneagram.healths
+            render json: enneagram
         else
             render json: {error: "Enneagram number not found. 🥲"}, status: :not_found
         end

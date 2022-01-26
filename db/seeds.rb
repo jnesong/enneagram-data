@@ -1,11 +1,13 @@
 
 puts "👋 Deleting old data..."
 
-Enneagram.delete_all
 Health.delete_all
 Practice.delete_all
 Strength.delete_all
 Weakness.delete_all
+Enneagram.delete_all
+User.delete_all
+Journey.delete_all
 
 puts "🌱 Seeding enneagram data..."
 
@@ -181,41 +183,42 @@ puts "🌱 Seeding practice data..."
 
 practice101 = Practice.create(enneagram_id: one.id, title: "Journaling confessions", description: "NA")
 practice102 = Practice.create(enneagram_id: one.id, title: "Nature walks", description: "NA")
-practice103 = Practice.create(enneagram_id: one.id, title: "Consider: Love arises from our imperfection, from our being imperfect and always in need of the forgiveness.", description: "NA")
+practice103 = Practice.create(enneagram_id: one.id, title: "Consider: Love arises from our imperfection, from our being imperfect and always in need of the forgiveness.", description: "Uncle Iroh: While it is always best to believe in oneself, a little help from others can be a great blessing.")
 
 practice201 = Practice.create(enneagram_id: two.id, title: "Fasting", description: "NA")
 practice202 = Practice.create(enneagram_id: two.id, title: "Deep, encouraging friendship with one or a few people", description: "NA")
-practice203 = Practice.create(enneagram_id: two.id, title: "Consider: I am in need, and that's OK.", description: "NA")
+practice203 = Practice.create(enneagram_id: two.id, title: "Consider: I am in need, and that's OK.", description: "Uncle Iroh: I know he doesn't want me around right now, but if he needs me, I'll be there.... Toph: Maybe you should tell him that you need him too.")
 
 practice301 = Practice.create(enneagram_id: three.id, title: "Fixed-Hour prayer or meditation", description: "NA")
 practice302 = Practice.create(enneagram_id: three.id, title: "Social media fasts", description: "NA")
-practice303 = Practice.create(enneagram_id: three.id, title: "Consider: Might invisibility be regarded not simply as refuge, but as a condition with its own meaning and power? It is not about retreating from the world but about finding some genuine alternative to a life of perpetual display.", description: "NA")
+practice303 = Practice.create(enneagram_id: three.id, title: "Consider: Might invisibility be regarded not simply as refuge, but as a condition with its own meaning and power? It is not about retreating from the world but about finding some genuine alternative to a life of perpetual display.", description: "Uncle Iroh: Pride is not the opposite of shame, but its source. True humility is the only antidote to shame.; The best tea tastes delicious whether it comes in a porcelain pot or a tin cup.")
 
 practice401 = Practice.create(enneagram_id: four.id, title: "Journaling thanksgiving", description: "NA")
 practice402 = Practice.create(enneagram_id: four.id, title: "Regular meals in community/with others", description: "NA")
-practice403 = Practice.create(enneagram_id: four.id, title: "Consider: I am the combined effort of everyone I've ever known.", description: "NA")
+practice403 = Practice.create(enneagram_id: four.id, title: "Consider: I am the combined effort of everyone I've ever known.", description: "Uncle Iroh: I don't know the answer. Sometimes life is like this dark tunnel. You can't always see the light at the end of the tunnel, but if you just keep moving, you will come to a better place.")
 
 practice501 = Practice.create(enneagram_id: five.id, title: "Sharing- your heart, head, and hands", description: "NA")
 practice502 = Practice.create(enneagram_id: five.id, title: "Reading books", description: "NA")
-practice503 = Practice.create(enneagram_id: five.id, title: "Consider: There's bravery in being vulnerable.", description: "NA")
+practice503 = Practice.create(enneagram_id: five.id, title: "Consider: There's bravery in being vulnerable.", description: "Uncle Iroh: It is important to draw wisdom from many different places. If you take it from only one place, it becomes rigid and stale.")
 
 practice601 = Practice.create(enneagram_id: six.id, title: "Memorizing grounding truths.", description: "NA")
 practice602 = Practice.create(enneagram_id: six.id, title: "Prayer or meditation", description: "NA")
-practice603 = Practice.create(enneagram_id: six.id, title: "Consider: It's OK to trust.", description: "NA")
+practice603 = Practice.create(enneagram_id: six.id, title: "Consider: It's OK to trust.", description: "Uncle Iroh: You are stronger and wiser and freer than you have ever been.")
 
 practice701 = Practice.create(enneagram_id: seven.id, title: "Celebration", description: "NA")
 practice702 = Practice.create(enneagram_id: seven.id, title: "Silent solitude", description: "NA")
-practice703 = Practice.create(enneagram_id: seven.id, title: "Consider: Let it go.", description: "NA")
+practice703 = Practice.create(enneagram_id: seven.id, title: "Consider: Let it go.", description: "Uncle Iroh: Good times become good memories, but bad times make good lessons.")
 
 practice801 = Practice.create(enneagram_id: eight.id, title: "Journaling confessions", description: "NA")
 practice802 = Practice.create(enneagram_id: eight.id, title: "Deep, encouraging friendship with one or a few people", description: "NA")
-practice803 = Practice.create(enneagram_id: eight.id, title: "Consider: Gentleness is not weakness.", description: "NA")
+practice803 = Practice.create(enneagram_id: eight.id, title: "Consider: Gentleness is not weakness.", description: "Uncle Iroh: Sometimes, the best way to solve your own problems is to help someone else.")
 
 practice901 = Practice.create(enneagram_id: nine.id, title: "Nature walks", description: "NA")
 practice902 = Practice.create(enneagram_id: nine.id, title: "Fixed-Hour prayer or meditation", description: "NA")
-practice903 = Practice.create(enneagram_id: nine.id, title: "Consider: Your presence and opinion matters.", description: "NA")
+practice903 = Practice.create(enneagram_id: nine.id, title: "Consider: Your presence and opinion matters.", description: "Uncle Iroh: Perfection and power are overrated. I think you are very wise to choose happiness and love.")
 
 puts "🌱 Seeding strength and weakness data..."
+
 strength101 = Strength.create(enneagram_id:one.id, title:"Ones live with conviction, are bold and courageous.", description: "Healthy Ones are willing to take a stand and sacrifice themselves for what’s right, and keep the mission moving forward; they are sensible, responsible, ethical, self- disciplined, just, fair, tolerant of failure—both theirs and others—and accepting of their limits and losses.")
 strength201 = Strength.create(enneagram_id:two.id, title:"Twos are thoughtful, caring, and empathetic.", description: "Healthy Twos are in touch with their own emotional and spiritual needs and are willing to be vulnerable before God and others. They express appreciation, generosity, humility, affection, encouragement, compassion, and others-orientedness.")
 strength301 = Strength.create(enneagram_id:three.id, title:"Threes are effective, competent, and adaptable.", description: "Healthy threes are driven by love instead of shame. They are authentic, gracious, humble, hard-working yet restful, tolerant of their failures, accepting of their limits and losses, and interested in others.")
@@ -236,4 +239,14 @@ weakness701 = Weakness.create(enneagram_id:seven.id, title:"Sevens are driven by
 weakness801 = Weakness.create(enneagram_id:eight.id, title:"The underlying emotion Eights are trying to conquer is guilt, feeling as though they aren’t good enough.", description: "Their survival strategy is to be powerful and take control. This leads to their besetting sin of lust—the passion for power. They become very angry, confrontational and aggressive and throw their weight around. People can feel dominated, controlled, and belittled by Eights, but rarely do Eights notice how they make others feel. They can be emotional bulldozers.")
 weakness901 = Weakness.create(enneagram_id:nine.id, title:"For Nines, the besetting sin is sloth- not in terms of physical laziness but relational negligence.", description: "Nines tend to check out emotionally and relationally. When they’re unhealthy, they will run from all conflict, and their defense strategy is to shut down and withdraw. They will no longer be fully present. They can lose themselves and retreat into inoculating activity, like watching TV, playing games on their phone, checking social media, doing busy work, distracting themselves from their emotional needs and the needs of others. This creates a deep sense of guilt in Nines, which is the underlying emotion they are trying to overcome.")
 
+puts "🥸 Seeding user data..."
+
+jenny = User.create(username: "jenny2", displayname: "jen")
+remus = User.create(username: "remu15", displayname: "remus")
+
+puts "📔 Seeding journey data..."
+
+journey1= Journey.create(date: "jan, 6 2022", enneagram: 6, level: 5, entry: "Many words to say....", user_id: jenny.id )
+journey2= Journey.create(date: "dec, 20 2021", enneagram: 5, level: 8, entry: "Welp....", user_id: jenny.id )
+journey3= Journey.create(date: "jan, 5 2022", enneagram: 9, level: 9, entry: "Woof....", user_id: remus.id)
 
