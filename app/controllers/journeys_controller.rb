@@ -2,7 +2,7 @@ class JourneysController < ApplicationController
     before_action :authenticate_user
 
     def index
-        render json: Journey.all
+        render json: @current_user.journeys.all
     end
 
     def show 
@@ -11,7 +11,7 @@ class JourneysController < ApplicationController
     end
 
     def create
-        new_journey = Journey.create!(journey_params)
+        new_journey = @current_user.journeys.create!(journey_params)
         render json: new_journey, status: :created 
     end
     
