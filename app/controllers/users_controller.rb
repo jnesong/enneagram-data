@@ -12,9 +12,9 @@ class UsersController < ApplicationController
             end
     end
 
-    def show  #  get '/auth', to: 'users#show'
-        render json: @current_user
-    end
+    # def show  #  get '/auth', to: 'users#show'
+    #     render json: @current_user
+    # end
 
 
     private

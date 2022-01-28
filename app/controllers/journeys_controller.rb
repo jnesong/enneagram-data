@@ -1,6 +1,6 @@
 class JourneysController < ApplicationController
-    before_action :authenticate_user
-    skip_before_action :authenticate_user, only: [:index]
+    # before_action :authenticate_user
+    # skip_before_action :authenticate_user, only: [:index]
 
     def index
         # render json: @current_user.journeys.all
@@ -13,7 +13,8 @@ class JourneysController < ApplicationController
     end
 
     def create
-        new_journey = @current_user.journeys.create!(journey_params)
+        # new_journey = @current_user.journeys.create!(journey_params)
+        new_journey = Journey.create!(journey_params)
         render json: new_journey, status: :created 
     end
     

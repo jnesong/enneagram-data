@@ -239,14 +239,14 @@ weakness701 = Weakness.create(enneagram_id:seven.id, title:"Sevens are driven by
 weakness801 = Weakness.create(enneagram_id:eight.id, title:"The underlying emotion Eights are trying to conquer is guilt, feeling as though they aren’t good enough.", description: "Their survival strategy is to be powerful and take control. This leads to their besetting sin of lust—the passion for power. They become very angry, confrontational and aggressive and throw their weight around. People can feel dominated, controlled, and belittled by Eights, but rarely do Eights notice how they make others feel. They can be emotional bulldozers.")
 weakness901 = Weakness.create(enneagram_id:nine.id, title:"For Nines, the besetting sin is sloth- not in terms of physical laziness but relational negligence.", description: "Nines tend to check out emotionally and relationally. When they’re unhealthy, they will run from all conflict, and their defense strategy is to shut down and withdraw. They will no longer be fully present. They can lose themselves and retreat into inoculating activity, like watching TV, playing games on their phone, checking social media, doing busy work, distracting themselves from their emotional needs and the needs of others. This creates a deep sense of guilt in Nines, which is the underlying emotion they are trying to overcome.")
 
-puts "🥸 Seeding user data..."
+# puts "🥸 Seeding user data..."
 
-jenny = User.create(username: "jenny2", displayname: "jen")
-remus = User.create(username: "remu15", displayname: "remus")
+# jenny = User.create(username: "jenny2", displayname: "jen")
+# remus = User.create(username: "remu15", displayname: "remus")
 
-puts "📔 Seeding journey data..."
+# puts "📔 Seeding journey data..."
 
-journey1= Journey.create(date: "jan, 6 2022", enneagram: 6, level: 5, entry: "Many words to say....", user_id: jenny.id )
-journey2= Journey.create(date: "dec, 20 2021", enneagram: 5, level: 8, entry: "Welp....", user_id: jenny.id )
-journey3= Journey.create(date: "jan, 5 2022", enneagram: 9, level: 9, entry: "Woof....", user_id: remus.id)
+# journey1= Journey.create(date: "jan, 6 2022", enneagram: 6, level: 5, entry: "Many words to say....", user_id: jenny.id )
+# journey2= Journey.create(date: "dec, 20 2021", enneagram: 5, level: 8, entry: "Welp....", user_id: jenny.id )
+# journey3= Journey.create(date: "jan, 5 2022", enneagram: 9, level: 9, entry: "Woof....", user_id: remus.id)
 

@@ -14,11 +14,11 @@ class ApplicationController < ActionController::API
             render json: {error: "🥲 not found"}, status: :not_found
         end
 
-        def authenticate_user
-            @current_user = User.find_by_id(session[:user_id])
-            render json: { errors: ["Not authorized"] }, status: :unauthorized unless @current_user
-            # return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
-        end
+        # def authenticate_user
+        #     @current_user = User.find_by_id(session[:user_id])
+        #     render json: { errors: ["Not authorized"] }, status: :unauthorized unless @current_user
+        #     # return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
+        # end
 
         # def current_user #will change with authentication setup
         #     User.find_by_id(session[:user_id])

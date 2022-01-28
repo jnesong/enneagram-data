@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_24_182515) do
+ActiveRecord::Schema.define(version: 2022_01_28_001528) do
 
   create_table "enneagrams", force: :cascade do |t|
     t.integer "number"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_01_24_182515) do
   end
 
   create_table "journeys", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.string "date"
     t.integer "enneagram"
     t.integer "level"
